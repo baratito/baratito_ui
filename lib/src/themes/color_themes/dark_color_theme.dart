@@ -29,4 +29,7 @@ class DarkColorTheme extends ColorTheme {
 
   @override
   Color get iconAction => palette.offwhite;
+
+  @override
+  Color get disabled => palette.greyscale2;
 }

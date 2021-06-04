@@ -29,4 +29,7 @@ class LightColorTheme extends ColorTheme {
 
   @override
   Color get iconAction => palette.greyscale1;
+
+  @override
+  Color get disabled => palette.greyscale5;
 }

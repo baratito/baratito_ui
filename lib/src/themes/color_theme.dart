@@ -14,7 +14,9 @@ abstract class ColorTheme {
   Color get greenAccent;
   Color get greyAccent;
   Color get greyBackground;
-  
+
   Color get background;
+
   Color get iconAction;
+  Color get disabled;
 }
