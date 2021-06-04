@@ -21,7 +21,7 @@ class ButtonsView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 12),
                   child: PrimaryButton(
-                    icon: Icons.add,
+                    icon: BaratitoIcons.plus,
                     label: 'Creá una lista',
                   ),
                 ),
