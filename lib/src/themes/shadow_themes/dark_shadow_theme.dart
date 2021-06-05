@@ -16,6 +16,6 @@ class DarkShadowTheme extends ShadowTheme {
   BoxShadow get small => BoxShadow(
         blurRadius: 16,
         offset: Offset(0, 8),
-        color: palette.purpleDarkmode.withOpacity(.2),
+        color: palette.purpleDarkmode.withOpacity(.1),
       );
 }
