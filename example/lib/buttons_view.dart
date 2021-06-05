@@ -56,6 +56,19 @@ class ButtonsView extends StatelessWidget {
                     label: 'Cancelar',
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: SelectionButton(
+                    onTap: () {},
+                    label: 'Casa',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: SelectionButton(
+                    label: 'Trabajo',
+                  ),
+                ),
               ],
             ),
           ],
