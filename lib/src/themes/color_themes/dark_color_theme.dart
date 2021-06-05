@@ -13,10 +13,10 @@ class DarkColorTheme extends ColorTheme {
   Color get cyanAccent => palette.cyanDarkmode;
 
   @override
-  Color get greenAccent => palette.cyanDarkmode;
+  Color get greenAccent => palette.greenDarkmode;
 
   @override
-  Color get redAccent => palette.cyanDarkmode;
+  Color get redAccent => palette.redDarkmode;
 
   @override
   Color get greyAccent => palette.offwhite;
