@@ -69,6 +69,19 @@ class ButtonsView extends StatelessWidget {
                     label: 'Trabajo',
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: IconActionButton(
+                    onTap: () {},
+                    icon: BaratitoIcons.editSquare,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: IconActionButton(
+                    icon: BaratitoIcons.editSquare,
+                  ),
+                ),
               ],
             ),
           ],
