@@ -13,7 +13,7 @@ class SelectionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final borderRadius = BorderRadius.circular(24);
+    final borderRadius = BorderRadius.circular(16);
     final maxWidth = 340.0;
 
     return Container(
