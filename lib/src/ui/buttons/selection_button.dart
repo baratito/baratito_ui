@@ -1,7 +1,7 @@
-import 'package:baratito_ui/icons/baratito_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 
+import 'package:baratito_ui/icons/baratito_icons.dart';
 import 'package:baratito_ui/src/themes/theme_extension.dart';
 
 class SelectionButton extends StatelessWidget {
