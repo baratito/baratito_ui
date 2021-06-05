@@ -25,6 +25,26 @@ class ButtonsView extends StatelessWidget {
                     label: 'Creá una lista',
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: SecondaryButton(
+                    onTap: () {},
+                    label: 'Cancelar',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: SecondaryButton.extended(
+                    onTap: () {},
+                    label: 'Cerrar ventana',
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: SecondaryButton(
+                    label: 'Cancelar',
+                  ),
+                ),
               ],
             ),
           ],
