@@ -17,7 +17,18 @@ class ButtonsView extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                PrimaryButton.extended(label: 'Completar compra'),
+                PrimaryButton.extended(
+                  label: 'Completar compra',
+                  onTap: () {},
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 12),
+                  child: PrimaryButton(
+                    onTap: () {},
+                    icon: BaratitoIcons.plus,
+                    label: 'Creá una lista',
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.only(top: 12),
                   child: PrimaryButton(

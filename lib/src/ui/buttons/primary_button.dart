@@ -8,12 +8,14 @@ enum PrimaryButtonType { regular, expanded }
 class PrimaryButton extends StatelessWidget {
   final String label;
   final IconData? icon;
+  final VoidCallback? onTap;
   final PrimaryButtonType _type;
 
   const PrimaryButton({
     Key? key,
     required this.label,
     this.icon,
+    this.onTap,
   })  : _type = PrimaryButtonType.regular,
         super(key: key);
 
@@ -21,6 +23,7 @@ class PrimaryButton extends StatelessWidget {
     Key? key,
     required this.label,
     this.icon,
+    this.onTap,
   })  : _type = PrimaryButtonType.expanded,
         super(key: key);
 
@@ -30,6 +33,7 @@ class PrimaryButton extends StatelessWidget {
       key: key,
       label: label,
       icon: icon,
+      onTap: onTap,
       type: _type,
     );
   }
@@ -38,35 +42,41 @@ class PrimaryButton extends StatelessWidget {
 class _PrimaryButton extends StatelessWidget {
   final String label;
   final IconData? icon;
+  final VoidCallback? onTap;
   final PrimaryButtonType type;
 
   const _PrimaryButton({
     Key? key,
     required this.label,
     this.icon,
+    this.onTap,
     this.type = PrimaryButtonType.regular,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final contentTheme = context.theme.text.primaryButton;
+    final colorTheme = context.theme.colors;
     final borderRadius = BorderRadius.circular(24);
     final maxWidth = 340.0;
+    final hasOnTap = onTap != null;
 
     return Container(
       constraints: BoxConstraints(maxWidth: maxWidth),
       decoration: BoxDecoration(
         borderRadius: borderRadius,
-        boxShadow: [context.theme.shadows.small],
+        boxShadow: [
+          if (hasOnTap) context.theme.shadows.small,
+        ],
       ),
       child: Material(
-        color: context.theme.colors.primary,
+        color: hasOnTap ? colorTheme.primary : colorTheme.disabled,
         borderRadius: borderRadius,
         child: InkWell(
           highlightColor: contentTheme.color!.withOpacity(.3),
           splashColor: contentTheme.color!.withOpacity(.05),
           borderRadius: borderRadius,
-          onTap: () {},
+          onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             child: _buildContent(context, contentTheme),
