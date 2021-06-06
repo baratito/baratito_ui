@@ -1,5 +1,7 @@
-import 'package:baratito_ui/src/ui/buttons/flat_button_base.dart';
 import 'package:flutter/material.dart';
+
+import 'package:baratito_ui/src/themes/theme_extension.dart';
+import 'package:baratito_ui/src/ui/buttons/flat_button_base.dart';
 
 enum SecondaryButtonType { regular, extended }
 
@@ -32,15 +34,25 @@ class SecondaryButton extends StatelessWidget {
       return FlatButtonBase.extended(
         key: key,
         label: label,
-        icon: icon,
+        leading: _buildIcon(context),
         onTap: onTap,
       );
     }
     return FlatButtonBase(
       key: key,
       label: label,
-      icon: icon,
+      leading: _buildIcon(context),
       onTap: onTap,
+    );
+  }
+
+  Widget _buildIcon(BuildContext context) {
+    final contentTheme = context.theme.text.secondaryButton;
+    final iconSize = contentTheme.fontSize! * 1.5;
+    return Icon(
+      icon,
+      color: contentTheme.color,
+      size: iconSize,
     );
   }
 }
