@@ -41,6 +41,12 @@ class InputsView extends StatelessWidget {
                 placeholder: 'Agregar un alias...',
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: SearchBox(
+                placeholder: 'Buscar algún producto...',
+              ),
+            ),
           ],
         ),
       ),
