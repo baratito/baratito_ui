@@ -4,12 +4,17 @@ import 'package:baratito_ui/src/themes/theme_extension.dart';
 
 class IconActionButton extends StatelessWidget {
   final IconData icon;
+  final double? iconSize;
   final VoidCallback? onTap;
 
-  IconActionButton({Key? key, required this.icon, this.onTap})
-      : super(key: key);
+  IconActionButton({
+    Key? key,
+    required this.icon,
+    this.iconSize,
+    this.onTap,
+  }) : super(key: key);
 
-  final _iconSize = 32.0;
+  double get _iconSize => iconSize ?? 32.0;
 
   @override
   Widget build(BuildContext context) {
