@@ -51,10 +51,13 @@ class SecondaryButton extends StatelessWidget {
 
     final contentTheme = context.theme.text.secondaryButton;
     final iconSize = contentTheme.fontSize! * 1.5;
-    return Icon(
-      icon,
-      color: contentTheme.color,
-      size: iconSize,
+    return Padding(
+      padding: const EdgeInsets.only(right: 4),
+      child: Icon(
+        icon,
+        color: contentTheme.color,
+        size: iconSize,
+      ),
     );
   }
 }

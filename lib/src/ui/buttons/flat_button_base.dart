@@ -121,10 +121,7 @@ class _FlatButtonBase extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         if (leading != null)
-          Padding(
-            padding: const EdgeInsets.only(right: 4),
-            child: leading,
-          ),
+          leading!,
         Flexible(
           child: AutoSizeText(label, style: contentTheme, maxLines: 1),
         ),
