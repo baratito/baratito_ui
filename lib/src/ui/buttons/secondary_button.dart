@@ -46,7 +46,9 @@ class SecondaryButton extends StatelessWidget {
     );
   }
 
-  Widget _buildIcon(BuildContext context) {
+  Widget? _buildIcon(BuildContext context) {
+    if (icon == null) return null;
+
     final contentTheme = context.theme.text.secondaryButton;
     final iconSize = contentTheme.fontSize! * 1.5;
     return Icon(
