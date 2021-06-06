@@ -16,6 +16,7 @@ class App extends StatelessWidget {
       child: MaterialApp(
         theme: ThemeData(fontFamily: 'packages/baratito_ui/Poppins'),
         home: WidgetTestView(),
+        debugShowCheckedModeBanner: false,
       ),
     );
   }
