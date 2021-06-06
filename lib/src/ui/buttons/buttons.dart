@@ -1,3 +1,4 @@
+export 'circular_icon_button.dart';
 export 'flat_button_base.dart';
 export 'icon_action_button.dart';
 export 'notifications_button.dart';

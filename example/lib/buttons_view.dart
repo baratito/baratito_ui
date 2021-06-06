@@ -21,9 +21,11 @@ class _ButtonsViewState extends State<ButtonsView> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            SingleChildScrollView(
-              child: Row(
-                children: [_buildContent(context)],
+            Expanded(
+              child: SingleChildScrollView(
+                child: Row(
+                  children: [_buildContent(context)],
+                ),
               ),
             ),
           ],
@@ -100,6 +102,13 @@ class _ButtonsViewState extends State<ButtonsView> {
           padding: const EdgeInsets.only(top: 12),
           child: IconActionButton(
             icon: BaratitoIcons.editSquare,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 12),
+          child: CircularIconButton(
+            icon: BaratitoIcons.buy,
+            onTap: () {},
           ),
         ),
         Padding(
