@@ -32,4 +32,7 @@ class DarkColorTheme extends ColorTheme {
 
   @override
   Color get disabled => palette.greyscale2;
+
+  @override
+  Color get input => palette.greyscale2;
 }

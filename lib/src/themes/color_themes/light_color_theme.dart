@@ -32,4 +32,7 @@ class LightColorTheme extends ColorTheme {
 
   @override
   Color get disabled => palette.greyscale5;
+
+  @override
+  Color get input => palette.greyscale6;
 }

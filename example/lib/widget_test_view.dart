@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:baratito_ui/baratito_ui.dart';
 
+import 'package:example/inputs_view.dart';
 import 'package:example/texts_view.dart';
 import 'package:example/branding_view.dart';
 import 'package:example/buttons_view.dart';
@@ -20,6 +21,7 @@ class WidgetTestView extends StatelessWidget {
         _buildItem(context, 'Texts', TextsView()),
         _buildItem(context, 'Branding', BrandingView()),
         _buildItem(context, 'Buttons', ButtonsView()),
+        _buildItem(context, 'Inputs', InputsView()),
       ],
     );
   }

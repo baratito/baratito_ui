@@ -24,6 +24,7 @@ class BaratitoPalette {
   final greyscale3 = Color(0xFF6E7191);
   final greyscale4 = Color(0xFFA0A3BD);
   final greyscale5 = Color(0xFFD9DBE9);
+  final greyscale6 = Color(0xFFEFF0F6);
 
   final offwhite = Color(0xFFFCFCFC);
   final white = Color(0xFFFFFFFF);
