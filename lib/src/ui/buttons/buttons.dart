@@ -1,3 +1,4 @@
+export 'flat_button_base.dart';
 export 'icon_action_button.dart';
 export 'notifications_button.dart';
 export 'primary_button.dart';
