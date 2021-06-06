@@ -94,7 +94,7 @@ class _FlatButtonBase extends StatelessWidget {
         color: _backgroundColor,
         borderRadius: borderRadius,
         child: InkWell(
-          highlightColor: _foregroundColor.withOpacity(.2),
+          highlightColor: _foregroundColor.withOpacity(.1),
           splashColor: _foregroundColor.withOpacity(.05),
           borderRadius: borderRadius,
           onTap: onTap,
