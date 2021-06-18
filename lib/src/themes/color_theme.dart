@@ -19,4 +19,5 @@ abstract class ColorTheme {
   Color get background;
   Color get input;
   Color get iconAction;
+  Color get border;
 }

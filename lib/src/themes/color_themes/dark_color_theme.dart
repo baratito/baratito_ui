@@ -35,4 +35,7 @@ class DarkColorTheme extends ColorTheme {
 
   @override
   Color get input => palette.greyscale2;
+
+  @override
+  Color get border => palette.greyscale4;
 }
