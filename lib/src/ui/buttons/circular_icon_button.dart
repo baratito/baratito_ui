@@ -14,7 +14,7 @@ class CircularIconButton extends StatelessWidget {
     this.onTap,
   }) : super(key: key);
 
-  double get _iconSize => iconSize ?? 20.0;
+  double get _iconSize => iconSize ?? 32.0;
 
   @override
   Widget build(BuildContext context) {
