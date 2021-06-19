@@ -14,10 +14,9 @@ class CircularIconButton extends StatelessWidget {
     this.onTap,
   }) : super(key: key);
 
-  double get _iconSize => iconSize ?? 32.0;
-
   @override
   Widget build(BuildContext context) {
+    final _iconSize = iconSize ?? context.theme.dimensions.actionIconLarge;
     final hasOnTap = onTap != null;
     final borderRadius = BorderRadius.circular(_iconSize);
     return Container(
@@ -37,14 +36,14 @@ class CircularIconButton extends StatelessWidget {
           onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.all(12),
-            child: _buildContent(context),
+            child: _buildContent(context, _iconSize),
           ),
         ),
       ),
     );
   }
 
-  Widget _buildContent(BuildContext context) {
+  Widget _buildContent(BuildContext context, double size) {
     final hasOnTap = onTap != null;
 
     final defaultColor = context.theme.colors.iconAction;
@@ -55,7 +54,7 @@ class CircularIconButton extends StatelessWidget {
     return Icon(
       icon,
       color: iconColor,
-      size: _iconSize,
+      size: size,
     );
   }
 }

@@ -86,7 +86,7 @@ class _SolidButtonBase extends StatelessWidget {
     final _backgroundColor = backgroundColor ?? colorTheme.primary;
 
     final borderRadius = BorderRadius.circular(24);
-    final maxWidth = 340.0;
+    final maxWidth = context.theme.dimensions.extendedButton;
     final hasOnTap = onTap != null;
 
     return Container(

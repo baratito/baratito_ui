@@ -80,7 +80,7 @@ class _FlatButtonBase extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final borderRadius = BorderRadius.circular(24);
-    final maxWidth = 340.0;
+    final maxWidth = context.theme.dimensions.extendedButton;
     final _foregroundColor =
         foregroundColor ?? context.theme.text.secondaryButton.color!;
     final _backgroundColor = backgroundColor ?? Colors.transparent;

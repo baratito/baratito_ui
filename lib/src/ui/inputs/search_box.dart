@@ -30,7 +30,7 @@ class SearchBox extends StatelessWidget {
       child: Icon(
         BaratitoIcons.search,
         color: iconColor,
-        size: 30,
+        size: context.theme.dimensions.actionIconLarge,
       ),
     );
   }

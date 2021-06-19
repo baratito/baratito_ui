@@ -14,10 +14,9 @@ class IconActionButton extends StatelessWidget {
     this.onTap,
   }) : super(key: key);
 
-  double get _iconSize => iconSize ?? 32.0;
-
   @override
   Widget build(BuildContext context) {
+    final _iconSize = iconSize ?? context.theme.dimensions.actionIconLarge;
     final borderRadius = BorderRadius.circular(_iconSize / 1.5);
     return Container(
       decoration: BoxDecoration(
@@ -33,14 +32,14 @@ class IconActionButton extends StatelessWidget {
           onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.all(12),
-            child: _buildContent(context),
+            child: _buildContent(context, _iconSize),
           ),
         ),
       ),
     );
   }
 
-  Widget _buildContent(BuildContext context) {
+  Widget _buildContent(BuildContext context, double size) {
     final hasOnTap = onTap != null;
 
     final defaultColor = context.theme.colors.iconAction;
@@ -51,7 +50,7 @@ class IconActionButton extends StatelessWidget {
     return Icon(
       icon,
       color: iconColor,
-      size: _iconSize,
+      size: size,
     );
   }
 }
