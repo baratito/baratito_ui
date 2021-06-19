@@ -29,8 +29,8 @@ class ThemeService extends ChangeNotifier {
 
   void toggleTheme() {
     final newTheme = theme is LightTheme
-        ? _themeResolver.getLightTheme()
-        : _themeResolver.getDarkTheme();
+        ? _themeResolver.getDarkTheme()
+        : _themeResolver.getLightTheme();
     saveTheme(newTheme);
     updateTheme(newTheme);
   }
