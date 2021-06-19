@@ -1,13 +1,13 @@
-import 'package:baratito_ui/src/themes/baratito_palette.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:baratito_ui/src/themes/app_theme.dart';
-import 'package:baratito_ui/src/themes/app_themes/dark_theme.dart';
-import 'package:baratito_ui/src/themes/app_themes/light_theme.dart';
+import 'package:baratito_ui/src/themes/theme_resolver.dart';
 
 class ThemeService extends ChangeNotifier {
   final _themesKey = '__theme__';
+  final _themeResolver = ThemeResolver();
+
   final SharedPreferences preferences;
 
   ThemeService(this.preferences);
@@ -15,12 +15,12 @@ class ThemeService extends ChangeNotifier {
   late AppTheme theme;
 
   void init() {
-    AppTheme initialTheme = LightTheme(BaratitoPalette());
+    AppTheme initialTheme = _themeResolver.getLightTheme();
 
     if (preferences.containsKey(_themesKey)) {
       final name = preferences.getString(_themesKey);
-      if (name == '$DarkTheme') {
-        initialTheme = DarkTheme(BaratitoPalette());
+      if (name == _themeResolver.darkThemeKey) {
+        initialTheme = _themeResolver.getDarkTheme();
       }
     }
 
@@ -28,9 +28,9 @@ class ThemeService extends ChangeNotifier {
   }
 
   void toggleTheme() {
-    final newTheme = theme is DarkTheme
-        ? LightTheme(BaratitoPalette())
-        : DarkTheme(BaratitoPalette());
+    final newTheme = theme is LightTheme
+        ? _themeResolver.getLightTheme()
+        : _themeResolver.getDarkTheme();
     saveTheme(newTheme);
     updateTheme(newTheme);
   }
@@ -43,7 +43,9 @@ class ThemeService extends ChangeNotifier {
 
   @protected
   void saveTheme(AppTheme theme) {
-    final name = theme.runtimeType.toString();
-    preferences.setString(_themesKey, name);
+    final key = theme is LightTheme
+        ? _themeResolver.lightThemeKey
+        : _themeResolver.darkThemeKey;
+    preferences.setString(_themesKey, key);
   }
 }
