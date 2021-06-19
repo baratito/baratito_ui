@@ -32,7 +32,11 @@ class IconSquircle extends StatelessWidget {
       backgroundColor: _backgroundColor,
       borderColor: borderColor,
       borderSize: borderSize,
-      child: Icon(icon, size: 30, color: _iconColor),
+      child: Icon(
+        icon,
+        size: context.theme.dimensions.squircleContainerIcon,
+        color: _iconColor,
+      ),
     );
   }
 }

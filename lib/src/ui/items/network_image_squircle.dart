@@ -38,7 +38,7 @@ class NetworkImageSquircle extends StatelessWidget {
     final defaultBorderSize = 2.0;
     final _borderSize = borderSize ?? defaultBorderSize;
 
-    final defaultSize = 72.0;
+    final defaultSize = context.theme.dimensions.squircleContainer;
     final _size = size ?? defaultSize;
 
     final imageProvider = _getImageProvider(imageUrl);

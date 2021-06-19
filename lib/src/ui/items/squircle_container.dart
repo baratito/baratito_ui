@@ -28,7 +28,7 @@ class SquircleContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _borderSize = borderSize ?? 0.0;
-    final defaultSize = 72.0;
+    final defaultSize = context.theme.dimensions.squircleContainer;
 
     var _size = (size ?? defaultSize) - _borderSize;
 
