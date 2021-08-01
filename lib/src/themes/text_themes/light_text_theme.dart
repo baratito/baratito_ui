@@ -8,7 +8,7 @@ class LightTextTheme extends TextTheme {
 
   @override
   TextStyle get body => TextStyle(
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: FontWeight.w400,
         color: palette.greyscale2,
         letterSpacing: .75,
@@ -24,7 +24,7 @@ class LightTextTheme extends TextTheme {
 
   @override
   TextStyle get headline1 => TextStyle(
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: FontWeight.w600,
         color: palette.greyscale1,
         letterSpacing: .75,
@@ -32,7 +32,7 @@ class LightTextTheme extends TextTheme {
 
   @override
   TextStyle get headline2 => TextStyle(
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: FontWeight.w400,
         color: palette.greyscale4,
         letterSpacing: .75,
@@ -40,7 +40,7 @@ class LightTextTheme extends TextTheme {
 
   @override
   TextStyle get inputPlaceholder => TextStyle(
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: FontWeight.w400,
         color: palette.greyscale4,
         letterSpacing: .75,
@@ -48,7 +48,7 @@ class LightTextTheme extends TextTheme {
 
   @override
   TextStyle get itemSubtitle1 => TextStyle(
-        fontSize: 14,
+        fontSize: 13,
         fontWeight: FontWeight.w400,
         color: palette.greyscale3,
         letterSpacing: .25,
@@ -56,7 +56,7 @@ class LightTextTheme extends TextTheme {
 
   @override
   TextStyle get itemSubtitle2 => TextStyle(
-        fontSize: 14,
+        fontSize: 13,
         fontWeight: FontWeight.w600,
         color: palette.greyscale3,
         letterSpacing: .25,
@@ -64,15 +64,16 @@ class LightTextTheme extends TextTheme {
 
   @override
   TextStyle get itemTitle => TextStyle(
-        fontSize: 17,
+        fontSize: 15,
         fontWeight: FontWeight.w600,
         color: palette.greyscale1,
-        letterSpacing: .75,
+        letterSpacing: .5,
+        height: 1,
       );
 
   @override
   TextStyle get label => TextStyle(
-        fontSize: 16,
+        fontSize: 15,
         fontWeight: FontWeight.w400,
         color: palette.greyscale3,
         letterSpacing: .25,
