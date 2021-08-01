@@ -28,9 +28,18 @@ class ListItemsView extends StatelessWidget {
                   child: Row(
                     children: [
                       NetworkImageSquircle(
-                        imageUrl: 'https://imagenes.preciosclaros.gob.ar/productos/7793360000287.jpg',
+                        imageUrl:
+                            'https://imagenes.preciosclaros.gob.ar/productos/7793360000287.jpg',
                       )
                     ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20),
+                  child: ListItemBase(
+                    title: 'Tomatitos en conserva aaaaaaaa a aaaaaaaaa',
+                    subtitle1: 'Alimentos',
+                    subtitle2: 'Desde \$230',
                   ),
                 ),
               ],
