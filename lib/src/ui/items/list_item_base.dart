@@ -101,17 +101,17 @@ class _ListItemBaseState extends State<ListItemBase>
     final titleStyle = context.theme.text.itemTitle;
     final subtitle1Style = context.theme.text.itemSubtitle1;
     final subtitle2Style = context.theme.text.itemSubtitle2;
-    final buildLowerPadding =
-        widget.subtitle1 != null && widget.subtitle2 != null;
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
         _buildText(widget.title, titleStyle),
         if (widget.subtitle1 != null)
           _buildText(widget.subtitle1!, subtitle1Style),
-        if (buildLowerPadding) SizedBox(height: 2),
         if (widget.subtitle2 != null)
-          _buildText(widget.subtitle2!, subtitle2Style),
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: _buildText(widget.subtitle2!, subtitle2Style),
+          ),
       ],
     );
   }

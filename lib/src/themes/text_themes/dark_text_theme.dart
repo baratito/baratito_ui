@@ -60,6 +60,7 @@ class DarkTextTheme extends TextTheme {
         fontWeight: FontWeight.w600,
         color: palette.greyscale4,
         letterSpacing: .25,
+        height: 1,
       );
 
   @override

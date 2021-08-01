@@ -60,6 +60,7 @@ class LightTextTheme extends TextTheme {
         fontWeight: FontWeight.w600,
         color: palette.greyscale3,
         letterSpacing: .25,
+        height: 1,
       );
 
   @override
