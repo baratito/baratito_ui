@@ -15,4 +15,7 @@ class MobileDimensionTheme implements DimensionTheme {
 
   @override
   double get squircleContainerIcon => 32;
+
+  @override
+  double get listItemHeight => 84;
 }
