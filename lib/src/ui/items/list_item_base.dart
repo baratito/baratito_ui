@@ -77,27 +77,27 @@ class _ListItemBaseState extends State<ListItemBase>
             filterColor.withOpacity(.3),
             _pressedDown ? BlendMode.srcATop : BlendMode.dst,
           ),
-          child: _buildContent(context),
+          child: _buildContent(),
         ),
       ),
     );
   }
 
-  Widget _buildContent(BuildContext context) {
+  Widget _buildContent() {
     return SizedBox(
       height: context.theme.dimensions.listItemHeight,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           if (widget.leading != null) widget.leading!,
-          Expanded(child: _buildTexts(context)),
+          Expanded(child: _buildTexts()),
           if (widget.trailing != null) widget.trailing!,
         ],
       ),
     );
   }
 
-  Widget _buildTexts(BuildContext context) {
+  Widget _buildTexts() {
     final titleStyle = context.theme.text.itemTitle;
     final subtitle1Style = context.theme.text.itemSubtitle1;
     final subtitle2Style = context.theme.text.itemSubtitle2;
