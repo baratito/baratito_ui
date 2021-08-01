@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  assorted_layout_widgets: ^5.0.2
   auto_size_text: ^3.0.0-nullsafety.0
   cached_network_image: ^3.0.0
   flutter_svg: ^0.22.0
