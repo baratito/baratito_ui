@@ -1,1 +1,1 @@
-export 'build_context_extension.dart';
+export 'screen_dimensions_extension.dart';
