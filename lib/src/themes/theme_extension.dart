@@ -2,7 +2,6 @@ import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 import 'package:baratito_ui/src/themes/app_theme.dart';
-import 'package:baratito_ui/src/themes/app_themes/app_themes.dart';
 import 'package:baratito_ui/src/themes/theme_service.dart';
 
 extension ThemeExtension on BuildContext {
