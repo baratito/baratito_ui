@@ -4,6 +4,12 @@ abstract class BaratitoIcons {
   static const _fontFamily = 'BaratitoIcons';
   static const _fontPackage = 'baratito_ui';
 
+  static const IconData facebookLogo = IconData(
+    0xe800,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
   static const IconData arrowDown = IconData(
     0xe801,
     fontFamily: _fontFamily,
@@ -96,6 +102,12 @@ abstract class BaratitoIcons {
 
   static const IconData search = IconData(
     0xe810,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData googleLogo = IconData(
+    0xe811,
     fontFamily: _fontFamily,
     fontPackage: _fontPackage,
   );
