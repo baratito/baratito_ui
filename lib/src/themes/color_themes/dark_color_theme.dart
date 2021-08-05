@@ -38,4 +38,10 @@ class DarkColorTheme extends ColorTheme {
 
   @override
   Color get border => palette.greyscale4;
+
+  @override
+  Color get socialAuthFacebook => palette.facebookBlueDarkmode;
+
+  @override
+  Color get socialAuthGoogle => palette.googleOrangeDarkmode;
 }

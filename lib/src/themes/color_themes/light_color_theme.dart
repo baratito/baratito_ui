@@ -38,4 +38,10 @@ class LightColorTheme extends ColorTheme {
 
   @override
   Color get border => palette.greyscale5;
+
+  @override
+  Color get socialAuthFacebook => palette.facebookBlue;
+
+  @override
+  Color get socialAuthGoogle => palette.googleOrange;
 }

@@ -16,6 +16,9 @@ abstract class ColorTheme {
   Color get greyBackground;
   Color get disabled;
 
+  Color get socialAuthGoogle;
+  Color get socialAuthFacebook;
+
   Color get background;
   Color get input;
   Color get iconAction;

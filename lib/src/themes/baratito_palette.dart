@@ -19,6 +19,12 @@ class BaratitoPalette {
   final green = Color(0xFF00BA88);
   final greenDarkmode = Color(0xFF34EAB9);
 
+  final googleOrange = Color(0xFFF08475);
+  final googleOrangeDarkmode = Color(0xFFFE9283);
+
+  final facebookBlue = Color(0xFF4267B2);
+  final facebookBlueDarkmode = Color(0xFF5682DA);
+
   final greyscale1 = Color(0xFF14142B);
   final greyscale2 = Color(0xFF4E4B66);
   final greyscale3 = Color(0xFF6E7191);
