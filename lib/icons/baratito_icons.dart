@@ -70,7 +70,7 @@ abstract class BaratitoIcons {
     fontPackage: _fontPackage,
   );
 
-  static const IconData home = IconData(
+  static const IconData homeBulk = IconData(
     0xe80b,
     fontFamily: _fontFamily,
     fontPackage: _fontPackage,
@@ -108,6 +108,12 @@ abstract class BaratitoIcons {
 
   static const IconData googleLogo = IconData(
     0xe811,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData home = IconData(
+    0xe812,
     fontFamily: _fontFamily,
     fontPackage: _fontPackage,
   );
