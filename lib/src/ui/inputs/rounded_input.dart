@@ -138,6 +138,16 @@ class _RoundedInputState extends State<_RoundedInput>
 
   Widget _buildInput(BuildContext context) {
     final isLarge = widget.type == RoundedInputType.large;
+    final bodyTextStyle = context.theme.text.body.copyWith(
+      fontSize: isLarge
+          ? context.theme.text.body.fontSize! + 1
+          : context.theme.text.body.fontSize,
+    );
+    final placeholderTextStyle = context.theme.text.inputPlaceholder.copyWith(
+      fontSize: isLarge
+          ? context.theme.text.inputPlaceholder.fontSize! + 1
+          : context.theme.text.inputPlaceholder.fontSize,
+    );
     return Row(
       children: [
         if (widget.leading != null) widget.leading!,
@@ -147,11 +157,11 @@ class _RoundedInputState extends State<_RoundedInput>
             focusNode: _focusNode,
             autofocus: widget.autofocus ?? false,
             keyboardType: widget.inputType,
-            style: context.theme.text.body,
-            cursorColor: context.theme.text.body.color!,
+            style: bodyTextStyle,
+            cursorColor: bodyTextStyle.color!,
             decoration: InputDecoration(
               hintText: widget.placeholder,
-              hintStyle: context.theme.text.inputPlaceholder,
+              hintStyle: placeholderTextStyle,
               contentPadding: EdgeInsets.symmetric(
                 horizontal: 20,
                 vertical: isLarge ? 22 : 16,
