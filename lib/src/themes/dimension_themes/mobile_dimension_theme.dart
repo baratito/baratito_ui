@@ -3,7 +3,7 @@ import 'package:baratito_ui/src/themes/dimension_theme.dart';
 class MobileDimensionTheme implements DimensionTheme {
   @override
   double get extendedButton => 340;
-  
+
   @override
   double get actionIconLarge => 32;
 
@@ -18,4 +18,12 @@ class MobileDimensionTheme implements DimensionTheme {
 
   @override
   double get listItemHeight => 84;
+
+  double get navigationBarHeight => 92;
+
+  double get appBarHeight => 72;
+
+  double get appBarHorizontalPadding => 24;
+
+  double get viewHorizontalPadding => 24;
 }
