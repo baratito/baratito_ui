@@ -21,7 +21,7 @@ class MobileDimensionTheme implements DimensionTheme {
 
   double get navigationBarHeight => 92;
 
-  double get appBarHeight => 72;
+  double get appBarHeight => 56;
 
   double get appBarHorizontalPadding => 24;
 
