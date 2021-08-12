@@ -76,7 +76,7 @@ class LightTextTheme extends TextTheme {
   TextStyle get label => TextStyle(
         fontSize: 15,
         fontWeight: FontWeight.w400,
-        color: palette.greyscale3,
+        color: palette.greyscale4,
         letterSpacing: .25,
       );
 
