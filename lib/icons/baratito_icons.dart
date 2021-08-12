@@ -82,7 +82,7 @@ abstract class BaratitoIcons {
     fontPackage: _fontPackage,
   );
 
-  static const IconData notification = IconData(
+  static const IconData notificationBulk = IconData(
     0xe80d,
     fontFamily: _fontFamily,
     fontPackage: _fontPackage,
@@ -114,6 +114,12 @@ abstract class BaratitoIcons {
 
   static const IconData home = IconData(
     0xe812,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData notification = IconData(
+    0xe813,
     fontFamily: _fontFamily,
     fontPackage: _fontPackage,
   );
