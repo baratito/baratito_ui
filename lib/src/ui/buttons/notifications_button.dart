@@ -108,7 +108,7 @@ class _NotificationsButtonState extends State<NotificationsButton>
     return Stack(
       children: [
         IconActionButton(
-          icon: BaratitoIcons.notification,
+          icon: BaratitoIcons.notificationBulk,
           onTap: widget.onTap,
         ),
         Positioned(
