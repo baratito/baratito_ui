@@ -99,8 +99,12 @@ class _ListItemBaseState extends State<ListItemBase>
 
   Widget _buildTexts() {
     final titleStyle = context.theme.text.itemTitle;
-    final subtitle1Style = context.theme.text.itemSubtitle1;
-    final subtitle2Style = context.theme.text.itemSubtitle2;
+    final subtitle1Style = context.theme.text.itemSubtitle1.copyWith(
+      color: widget.subtitle1Color,
+    );
+    final subtitle2Style = context.theme.text.itemSubtitle2.copyWith(
+      color: widget.subtitle2Color,
+    );
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
