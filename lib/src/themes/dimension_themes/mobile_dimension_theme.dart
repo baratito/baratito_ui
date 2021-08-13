@@ -19,9 +19,7 @@ class MobileDimensionTheme implements DimensionTheme {
   @override
   double get listItemHeight => 84;
 
-  double get navigationBarHeight => 92;
-
-  double get appBarHeight => 56;
+  double get navigationBarHeight => 80;
 
   double get appBarHorizontalPadding => 24;
 
