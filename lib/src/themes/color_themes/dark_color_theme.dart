@@ -44,4 +44,7 @@ class DarkColorTheme extends ColorTheme {
 
   @override
   Color get socialAuthGoogle => palette.googleOrangeDarkmode;
+
+  @override
+  Color get dragLine => palette.greyscale2;
 }

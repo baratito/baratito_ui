@@ -23,4 +23,5 @@ abstract class ColorTheme {
   Color get input;
   Color get iconAction;
   Color get border;
+  Color get dragLine;
 }

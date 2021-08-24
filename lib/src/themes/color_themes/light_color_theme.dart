@@ -44,4 +44,7 @@ class LightColorTheme extends ColorTheme {
 
   @override
   Color get socialAuthGoogle => palette.googleOrange;
+
+  @override
+  Color get dragLine => palette.greyscale5;
 }
