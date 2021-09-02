@@ -52,7 +52,6 @@ class _StaggeredListState extends State<StaggeredList>
       final startTime = widget.initialDelay + (widget.staggerDelay * i);
       final endTime = startTime + widget.itemFadeInDuration;
       final totalDurationMilliseconds = _totalAnimationDuration.inMilliseconds;
-      print('total duration millist $totalDurationMilliseconds');
       _animations.add(
         _controller.curvedAnimation(
           begin: 0.0,
