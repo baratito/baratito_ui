@@ -7,17 +7,17 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
   assorted_layout_widgets:
     git:
       url: git://github.com/josh-burton/assorted_layout_widgets.git
       ref: beta-fix
   auto_size_text: ^3.0.0-nullsafety.0
   cached_network_image: ^3.0.0
+  flutter:
+    sdk: flutter
   flutter_svg: ^0.22.0
   path: ^1.8.0
-  provider: ^5.0.0
+  provider: ^6.0.0
   shared_preferences: ^2.0.6
 
 dev_dependencies:
