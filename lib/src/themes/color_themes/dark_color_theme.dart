@@ -47,4 +47,34 @@ class DarkColorTheme extends ColorTheme {
 
   @override
   Color get dragLine => palette.greyscale2;
+
+  @override
+  Color get aquamarineAccent => palette.aquamarineDarkmode;
+
+  @override
+  Color get blueAccent => palette.blueDarkmode;
+
+  @override
+  Color get brownAccent => palette.brownDarkmode;
+
+  @override
+  Color get lightblueAccent => palette.lightblueDarkmode;
+
+  @override
+  Color get lilacAccent => palette.lilacDarkmode;
+
+  @override
+  Color get mauveAccent => palette.mauveDarkmode;
+
+  @override
+  Color get orangeAccent => palette.orangeDarkmode;
+
+  @override
+  Color get pinkAccent => palette.pinkDarkmode;
+
+  @override
+  Color get salmonAccent => palette.salmonDarkmode;
+
+  @override
+  Color get spinner => palette.offwhite;
 }

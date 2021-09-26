@@ -19,6 +19,33 @@ class BaratitoPalette {
   final green = Color(0xFF00BA88);
   final greenDarkmode = Color(0xFF34EAB9);
 
+  final blue = Color(0xFF7AA2F1);
+  final blueDarkmode = Color(0xFF7CA9FF);
+
+  final brown = Color(0xFFBD9595);
+  final brownDarkmode = Color(0xFFC9A7A7);
+
+  final pink = Color(0xFFE79AD3);
+  final pinkDarkmode = Color(0xFFFFAAEA);
+
+  final mauve = Color(0xFFBB9CFF);
+  final mauveDarkmode = Color(0xFFC8AFFF);
+
+  final orange = Color(0xFFF6AE99);
+  final orangeDarkmode = Color(0xFFFFC0AE);
+
+  final aquamarine = Color(0xFF7FECCE);
+  final aquamarineDarkmode = Color(0xFFABFBE5);
+
+  final lightblue = Color(0xFF91D7ED);
+  final lightblueDarkmode = Color(0xFFB3E3FE);
+
+  final lilac = Color(0xFFD697F4);
+  final lilacDarkmode = Color(0xFFE5B1FD);
+
+  final salmon = Color(0xFFF285A6);
+  final salmonDarkmode = Color(0xFFFF93B3);
+
   final googleOrange = Color(0xFFF08475);
   final googleOrangeDarkmode = Color(0xFFFE9283);
 

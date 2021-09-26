@@ -47,4 +47,34 @@ class LightColorTheme extends ColorTheme {
 
   @override
   Color get dragLine => palette.greyscale5;
+
+  @override
+  Color get aquamarineAccent => palette.aquamarine;
+
+  @override
+  Color get blueAccent => palette.blue;
+
+  @override
+  Color get brownAccent => palette.brown;
+
+  @override
+  Color get lightblueAccent => palette.lightblue;
+
+  @override
+  Color get lilacAccent => palette.lilac;
+
+  @override
+  Color get mauveAccent => palette.mauve;
+
+  @override
+  Color get orangeAccent => palette.orange;
+
+  @override
+  Color get pinkAccent => palette.pink;
+
+  @override
+  Color get salmonAccent => palette.salmon;
+
+  @override
+  Color get spinner => palette.greyscale1;
 }
