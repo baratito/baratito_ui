@@ -16,7 +16,7 @@ class IconActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _iconSize = iconSize ?? context.theme.dimensions.actionIconLarge;
+    final _iconSize = iconSize ?? context.theme.dimensions.iconLarge;
     final borderRadius = BorderRadius.circular(_iconSize / 1.5);
     return Container(
       decoration: BoxDecoration(

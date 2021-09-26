@@ -185,7 +185,7 @@ class _RoundedInputState extends State<_RoundedInput>
   Widget _buildClearButton(BuildContext context) {
     final isRegular = widget.type == RoundedInputType.regular;
     final iconSize =
-        isRegular ? context.theme.dimensions.actionIconRegular : null;
+        isRegular ? context.theme.dimensions.iconRegular : null;
     return AnimatedBuilder(
       animation: _clearButtonFadeController,
       builder: (_, child) {

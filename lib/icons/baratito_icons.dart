@@ -123,4 +123,58 @@ abstract class BaratitoIcons {
     fontFamily: _fontFamily,
     fontPackage: _fontPackage,
   );
+
+  static const IconData steak = IconData(
+    0xe814,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData toothbrush = IconData(
+    0xe815,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData bottle = IconData(
+    0xe817,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData wine = IconData(
+    0xe819,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData baby = IconData(
+    0xe81a,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData treat = IconData(
+    0xe81b,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData snowflake = IconData(
+    0xe81c,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData bubbles = IconData(
+    0xe81d,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
+  static const IconData can = IconData(
+    0xe81e,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
 }

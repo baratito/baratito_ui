@@ -5,10 +5,10 @@ class MobileDimensionTheme implements DimensionTheme {
   double get extendedButton => 340;
 
   @override
-  double get actionIconLarge => 32;
+  double get iconLarge => 32;
 
   @override
-  double get actionIconRegular => 24;
+  double get iconRegular => 24;
 
   @override
   double get squircleContainer => 72;
@@ -24,4 +24,7 @@ class MobileDimensionTheme implements DimensionTheme {
   double get appBarHorizontalPadding => 24;
 
   double get viewHorizontalPadding => 24;
+
+  @override
+  double get spinner => 24;
 }

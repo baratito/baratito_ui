@@ -16,7 +16,7 @@ class CircularIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _iconSize = iconSize ?? context.theme.dimensions.actionIconLarge;
+    final _iconSize = iconSize ?? context.theme.dimensions.iconLarge;
     final hasOnTap = onTap != null;
     final borderRadius = BorderRadius.circular(_iconSize);
     return Container(
