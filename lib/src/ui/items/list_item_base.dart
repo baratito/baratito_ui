@@ -84,16 +84,13 @@ class _ListItemBaseState extends State<ListItemBase>
   }
 
   Widget _buildContent() {
-    return SizedBox(
-      height: context.theme.dimensions.listItemHeight,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          if (widget.leading != null) widget.leading!,
-          Expanded(child: _buildTexts()),
-          if (widget.trailing != null) widget.trailing!,
-        ],
-      ),
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        if (widget.leading != null) widget.leading!,
+        Expanded(child: _buildTexts()),
+        if (widget.trailing != null) widget.trailing!,
+      ],
     );
   }
 
