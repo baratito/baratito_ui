@@ -30,7 +30,7 @@ class SelectionButton extends StatelessWidget {
           borderRadius: borderRadius,
           onTap: onTap,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             child: _buildContent(context),
           ),
         ),
