@@ -16,9 +16,6 @@ class MobileDimensionTheme implements DimensionTheme {
   @override
   double get squircleContainerIcon => 32;
 
-  @override
-  double get listItemHeight => 84;
-
   double get navigationBarHeight => 80;
 
   double get appBarHorizontalPadding => 24;
@@ -26,5 +23,8 @@ class MobileDimensionTheme implements DimensionTheme {
   double get viewHorizontalPadding => 24;
 
   @override
-  double get spinner => 24;
+  double get spinner => 20;
+
+  @override
+  double get avatar => 44;
 }
