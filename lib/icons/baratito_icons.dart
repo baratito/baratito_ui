@@ -136,6 +136,12 @@ abstract class BaratitoIcons {
     fontPackage: _fontPackage,
   );
 
+  static const IconData settings = IconData(
+    0xe816,
+    fontFamily: _fontFamily,
+    fontPackage: _fontPackage,
+  );
+
   static const IconData bottle = IconData(
     0xe817,
     fontFamily: _fontFamily,
