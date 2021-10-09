@@ -34,10 +34,10 @@ class BaratitoPalette {
   final orange = Color(0xFFF6AE99);
   final orangeDarkmode = Color(0xFFFFC0AE);
 
-  final aquamarine = Color(0xFF7FECCE);
+  final aquamarine = Color(0xFF70D4B9);
   final aquamarineDarkmode = Color(0xFFABFBE5);
 
-  final lightblue = Color(0xFF91D7ED);
+  final lightblue = Color(0xFF85C8DD);
   final lightblueDarkmode = Color(0xFFB3E3FE);
 
   final lilac = Color(0xFFD697F4);
