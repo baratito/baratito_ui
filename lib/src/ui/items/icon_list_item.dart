@@ -64,7 +64,7 @@ class IconListItem extends StatelessWidget {
       child: IconSquircle(
         icon: icon,
         iconColor: color,
-        backgroundColor: color.withOpacity(.3),
+        backgroundColor: color.withOpacity(.2),
       ),
     );
   }

@@ -24,7 +24,7 @@ class IconSquircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _iconColor = iconColor ?? context.theme.colors.primary;
-    final defaultBackgroundColor = context.theme.colors.primary.withOpacity(.3);
+    final defaultBackgroundColor = context.theme.colors.primary.withOpacity(.2);
     final _backgroundColor = backgroundColor ?? defaultBackgroundColor;
 
     return SquircleContainer(
