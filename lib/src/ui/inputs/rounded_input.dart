@@ -7,12 +7,15 @@ import 'package:baratito_ui/src/themes/theme_extension.dart';
 
 enum RoundedInputType { regular, large }
 
+typedef OnValueChanged = void Function(String);
+
 class RoundedInput extends StatelessWidget {
   final String? placeholder;
   final Widget? leading;
   final TextInputType? inputType;
   final TextEditingController? controller;
   final bool? autofocus;
+  final OnValueChanged? onValueChanged;
   final RoundedInputType _type;
 
   const RoundedInput({
@@ -22,6 +25,7 @@ class RoundedInput extends StatelessWidget {
     this.inputType,
     this.controller,
     this.autofocus,
+    this.onValueChanged,
   })  : _type = RoundedInputType.regular,
         super(key: key);
 
@@ -32,6 +36,7 @@ class RoundedInput extends StatelessWidget {
     this.inputType,
     this.controller,
     this.autofocus,
+    this.onValueChanged,
   })  : _type = RoundedInputType.large,
         super(key: key);
 
@@ -43,6 +48,7 @@ class RoundedInput extends StatelessWidget {
       inputType: inputType,
       controller: controller,
       autofocus: autofocus,
+      onValueChanged: onValueChanged,
       type: _type,
     );
   }
@@ -54,6 +60,7 @@ class _RoundedInput extends StatefulWidget {
   final TextInputType? inputType;
   final TextEditingController? controller;
   final bool? autofocus;
+  final OnValueChanged? onValueChanged;
   final RoundedInputType type;
 
   const _RoundedInput({
@@ -63,6 +70,7 @@ class _RoundedInput extends StatefulWidget {
     this.inputType,
     this.controller,
     this.autofocus,
+    this.onValueChanged,
     this.type = RoundedInputType.regular,
   }) : super(key: key);
 
@@ -80,10 +88,12 @@ class _RoundedInputState extends State<_RoundedInput>
   final _cleaButtonFadeAnimationDuration = const Duration(milliseconds: 300);
 
   bool _hasFocus = false;
+  late String _lastInputValue;
 
   @override
   void initState() {
     _controller = widget.controller ?? TextEditingController();
+    _lastInputValue = widget.controller?.text ?? '';
     _clearButtonFadeController = AnimationController(
       vsync: this,
       duration: _cleaButtonFadeAnimationDuration,
@@ -98,15 +108,24 @@ class _RoundedInputState extends State<_RoundedInput>
 
   void _onFocus() {
     final hasFocus = _focusNode.hasFocus;
+    if (hasFocus == _hasFocus) return;
     setState(() => _hasFocus = hasFocus);
   }
 
   void _onValueChanged() {
-    final hasText = _controller.text.isNotEmpty;
-    if (hasText) {
-      _clearButtonFadeController.forward();
-    } else {
-      _clearButtonFadeController.reverse();
+    if (_controller.text != _lastInputValue) {
+      _lastInputValue = _controller.text;
+      final hasText = _controller.text.isNotEmpty;
+      if (hasText) {
+        if (!_clearButtonFadeController.isCompleted) {
+          _clearButtonFadeController.forward();
+        }
+      } else {
+        _clearButtonFadeController.reverse();
+      }
+      if (widget.onValueChanged != null) {
+        widget.onValueChanged!(_controller.text);
+      }
     }
   }
 
@@ -155,6 +174,7 @@ class _RoundedInputState extends State<_RoundedInput>
           child: TextField(
             controller: _controller,
             focusNode: _focusNode,
+            // onChanged: _onInputChange,
             autofocus: widget.autofocus ?? false,
             keyboardType: widget.inputType,
             style: bodyTextStyle,
@@ -182,10 +202,18 @@ class _RoundedInputState extends State<_RoundedInput>
     );
   }
 
+  // void _onInputChange(String value) {
+  //   if (_lastInputValue != value) {
+  //     _lastInputValue = value;
+  //     if (widget.onValueChanged != null) {
+  //       widget.onValueChanged!(value);
+  //     }
+  //   }
+  // }
+
   Widget _buildClearButton(BuildContext context) {
     final isRegular = widget.type == RoundedInputType.regular;
-    final iconSize =
-        isRegular ? context.theme.dimensions.iconRegular : null;
+    final iconSize = isRegular ? context.theme.dimensions.iconRegular : null;
     return AnimatedBuilder(
       animation: _clearButtonFadeController,
       builder: (_, child) {
