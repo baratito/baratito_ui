@@ -26,11 +26,12 @@ class IconSquircle extends StatelessWidget {
     final _iconColor = iconColor ?? context.theme.colors.primary;
     final defaultBackgroundColor = context.theme.colors.primary.withOpacity(.2);
     final _backgroundColor = backgroundColor ?? defaultBackgroundColor;
+    final _borderColor = borderColor ?? defaultBackgroundColor;
 
     return SquircleContainer(
       size: size,
       backgroundColor: _backgroundColor,
-      borderColor: borderColor,
+      borderColor: _borderColor,
       borderSize: borderSize,
       child: Icon(
         icon,

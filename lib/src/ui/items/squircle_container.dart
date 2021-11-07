@@ -40,6 +40,7 @@ class SquircleContainer extends StatelessWidget {
         side: _buildBorderSide(_borderSize),
         superRadius: 20,
       ),
+      clipBehavior: Clip.antiAlias,
       child: Container(
         height: _size,
         width: _size,

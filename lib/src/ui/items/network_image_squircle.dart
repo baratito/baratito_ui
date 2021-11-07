@@ -7,8 +7,12 @@ import 'package:baratito_ui/src/ui/items/squircle_container.dart';
 class NetworkImageSquircle extends StatelessWidget {
   final String? imageUrl;
 
-  /// A widget to be displayed when [imageUrl] is `null`
+  /// A widget to be displayed when [imageUrl] is `null` or an error occurs
+  /// whilst loading the image
   final Widget? fallbackWidget;
+
+  /// A widget to be displayed when the image is loading
+  final Widget? loadingWidget;
 
   final double? size;
 
@@ -22,6 +26,7 @@ class NetworkImageSquircle extends StatelessWidget {
     Key? key,
     this.imageUrl,
     this.fallbackWidget,
+    this.loadingWidget,
     this.size,
     this.backgroundColor,
     this.borderColor,
@@ -41,31 +46,36 @@ class NetworkImageSquircle extends StatelessWidget {
     final defaultSize = context.theme.dimensions.squircleContainer;
     final _size = size ?? defaultSize;
 
-    final imageProvider = _getImageProvider(imageUrl);
-    final hasImageProvider = imageProvider != null;
+    final hasImageUrl = imageUrl != null;
 
     return SquircleContainer(
       size: _size,
       backgroundColor: _backgroundColor,
       borderSize: _borderSize,
       borderColor: _borderColor,
-      child: hasImageProvider ? _buildImage(imageProvider!) : _buildFallback(),
+      child: hasImageUrl ? _buildImage() : _buildFallback(),
     );
-  }
-
-  ImageProvider? _getImageProvider(String? url) {
-    if (url == null) return null;
-    return CachedNetworkImageProvider(url);
   }
 
   Widget _buildFallback() {
     return fallbackWidget ?? Container();
   }
 
-  Widget _buildImage(ImageProvider imageProvider) {
-    return Container(
-      margin: const EdgeInsets.all(4),
-      child: Image(image: imageProvider),
+  Widget _buildLoading() {
+    return loadingWidget ?? Container();
+  }
+
+  Widget _buildImage() {
+    return CachedNetworkImage(
+      imageUrl: imageUrl!,
+      imageBuilder: (_, provider) {
+        return Container(
+          margin: const EdgeInsets.all(4),
+          child: Image(image: provider),
+        );
+      },
+      placeholder: (_, __) => _buildLoading(),
+      errorWidget: (_, __, ___) => _buildFallback(),
     );
   }
 }
