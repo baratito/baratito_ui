@@ -138,14 +138,15 @@ class _ListItemBaseState extends State<ListItemBase>
   }
 
   void _onTapDown() {
+    if (widget.onPressed == null) return;
     _setPressedDown(true);
     _scaleController.forward();
   }
 
   void _onTapUp() {
-    if (widget.onPressed != null) {
-      widget.onPressed!();
-    }
+    if (widget.onPressed == null) return;
+
+    widget.onPressed!();
 
     final animationIsRunning = _scaleController.isAnimating;
     if (animationIsRunning) {
