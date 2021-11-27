@@ -1,6 +1,5 @@
 import 'package:baratito_ui/src/themes/baratito_palette.dart';
 import 'package:baratito_ui/src/themes/text_theme.dart';
-import 'package:flutter/src/painting/text_style.dart';
 import 'package:flutter/widgets.dart';
 
 class DarkTextTheme extends TextTheme {
@@ -52,7 +51,6 @@ class DarkTextTheme extends TextTheme {
         fontWeight: FontWeight.w400,
         color: palette.greyscale3,
         letterSpacing: .25,
-        height: 1.8,
       );
 
   @override
@@ -61,7 +59,6 @@ class DarkTextTheme extends TextTheme {
         fontWeight: FontWeight.w700,
         color: palette.greyscale4,
         letterSpacing: .25,
-        height: 1.2,
       );
 
   @override
@@ -70,7 +67,6 @@ class DarkTextTheme extends TextTheme {
         fontWeight: FontWeight.w600,
         color: palette.offwhite,
         letterSpacing: .5,
-        height: 1,
       );
 
   @override

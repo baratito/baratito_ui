@@ -72,10 +72,12 @@ class IconListItem extends StatelessWidget {
   Widget? _buildTrailing(BuildContext context) {
     if (actionIcon == null) return null;
     if (onPressed == null && onLongPressed == null) return null;
+    final iconSize = context.theme.dimensions.iconRegular;
     return IgnorePointer(
       ignoring: true,
       child: IconActionButton(
         icon: actionIcon!,
+        iconSize: iconSize,
         onTap: () {},
       ),
     );

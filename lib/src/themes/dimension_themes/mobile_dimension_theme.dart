@@ -11,10 +11,10 @@ class MobileDimensionTheme implements DimensionTheme {
   double get iconRegular => 24;
 
   @override
-  double get squircleContainer => 72;
+  double get squircleContainer => 52;
 
   @override
-  double get squircleContainerIcon => 32;
+  double get squircleContainerIcon => 22;
 
   double get navigationBarHeight => 80;
 
