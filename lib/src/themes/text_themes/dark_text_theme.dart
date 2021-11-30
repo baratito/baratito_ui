@@ -55,7 +55,7 @@ class DarkTextTheme extends TextTheme {
 
   @override
   TextStyle get itemSubtitle2 => TextStyle(
-        fontSize: 14,
+        fontSize: 13,
         fontWeight: FontWeight.w700,
         color: palette.greyscale4,
         letterSpacing: .25,

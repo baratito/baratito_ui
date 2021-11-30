@@ -108,11 +108,10 @@ class _ListItemBaseState extends State<ListItemBase>
         _buildText(widget.title, titleStyle),
         if (widget.subtitle1 != null)
           _buildText(widget.subtitle1!, subtitle1Style),
+        if (widget.subtitle1 != null && widget.subtitle2 != null)
+          SizedBox(height: 4),
         if (widget.subtitle2 != null)
-          Padding(
-            padding: const EdgeInsets.only(top: 4),
-            child: _buildText(widget.subtitle2!, subtitle2Style),
-          ),
+          _buildText(widget.subtitle2!, subtitle2Style),
       ],
     );
   }
