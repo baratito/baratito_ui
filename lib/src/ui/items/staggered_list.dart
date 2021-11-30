@@ -40,6 +40,12 @@ class _StaggeredListState extends State<StaggeredList>
     super.initState();
   }
 
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   void _setTotalAnimationDuration() {
     final initialDelay = widget.initialDelay;
     final staggerDelay = widget.staggerDelay * widget.children.length;
