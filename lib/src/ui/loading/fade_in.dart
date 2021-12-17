@@ -39,6 +39,12 @@ class _FadeInState extends State<FadeIn> with SingleTickerProviderStateMixin {
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AnimatedFadeInUp(
       animation: _fadeInAnimation,
